@@ -8,17 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		17EBA2952C0750E400A02F78 /* WhatsappChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2942C0750E400A02F78 /* WhatsappChatApp.swift */; };
-		17EBA2972C0750E400A02F78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2962C0750E400A02F78 /* ContentView.swift */; };
 		17EBA2992C0750EF00A02F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EBA2982C0750EF00A02F78 /* Assets.xcassets */; };
 		17EBA29C2C0750EF00A02F78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EBA29B2C0750EF00A02F78 /* Preview Assets.xcassets */; };
+		17EBA2A32C0755E700A02F78 /* MainTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2A22C0755E700A02F78 /* MainTabview.swift */; };
+		17EBA2A52C0756AB00A02F78 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2A42C0756AB00A02F78 /* ChatView.swift */; };
+		17EBA2A72C075E4700A02F78 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2A62C075E4700A02F78 /* CallView.swift */; };
+		17EBA2A92C075E9600A02F78 /* UpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2A82C075E9600A02F78 /* UpdatesView.swift */; };
+		17EBA2AB2C075EB400A02F78 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2AA2C075EB400A02F78 /* CommunityView.swift */; };
+		17EBA2AD2C075ECA00A02F78 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2AC2C075ECA00A02F78 /* SettingView.swift */; };
+		17EBA2B22C0777E300A02F78 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2B12C0777E300A02F78 /* ProfileView.swift */; };
+		17EBA2B42C079F4700A02F78 /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2B32C079F4700A02F78 /* ChatDetailView.swift */; };
+		17EBA2D62C07CF1400A02F78 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2D52C07CF1400A02F78 /* PhotoPicker.swift */; };
+		17EBA2F82C08280700A02F78 /* ChatsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2F62C08280700A02F78 /* ChatsModel.xcdatamodeld */; };
+		17EBA2FA2C0828C300A02F78 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2F92C0828C300A02F78 /* StorageProvider.swift */; };
+		17EBA2FD2C08333D00A02F78 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA2FC2C08333D00A02F78 /* Chat.swift */; };
+		17EBA3282C0857AD00A02F78 /* ChatCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA3272C0857AD00A02F78 /* ChatCellView.swift */; };
+		17EBA3712C089FD400A02F78 /* ContentView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA3702C089FD400A02F78 /* ContentView.swift.swift */; };
+		17EBA3742C08A08C00A02F78 /* FruitsCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA3722C08A08C00A02F78 /* FruitsCoreData.xcdatamodeld */; };
+		17EBA3762C08A0AB00A02F78 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA3752C08A0AB00A02F78 /* Persistence.swift */; };
+		17EBA3782C08A0BF00A02F78 /* CoreDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBA3772C08A0BF00A02F78 /* CoreDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17EBA2912C0750E400A02F78 /* WhatsappChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsappChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EBA2942C0750E400A02F78 /* WhatsappChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappChatApp.swift; sourceTree = "<group>"; };
-		17EBA2962C0750E400A02F78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17EBA2982C0750EF00A02F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17EBA29B2C0750EF00A02F78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		17EBA2A22C0755E700A02F78 /* MainTabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabview.swift; sourceTree = "<group>"; };
+		17EBA2A42C0756AB00A02F78 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		17EBA2A62C075E4700A02F78 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
+		17EBA2A82C075E9600A02F78 /* UpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesView.swift; sourceTree = "<group>"; };
+		17EBA2AA2C075EB400A02F78 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		17EBA2AC2C075ECA00A02F78 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		17EBA2B12C0777E300A02F78 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		17EBA2B32C079F4700A02F78 /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		17EBA2D52C07CF1400A02F78 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		17EBA2F72C08280700A02F78 /* ChatsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatsModel.xcdatamodel; sourceTree = "<group>"; };
+		17EBA2F92C0828C300A02F78 /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
+		17EBA2FC2C08333D00A02F78 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		17EBA3272C0857AD00A02F78 /* ChatCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellView.swift; sourceTree = "<group>"; };
+		17EBA3702C089FD400A02F78 /* ContentView.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift.swift; sourceTree = "<group>"; };
+		17EBA3732C08A08C00A02F78 /* FruitsCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitsCoreData.xcdatamodel; sourceTree = "<group>"; };
+		17EBA3752C08A0AB00A02F78 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		17EBA3772C08A0BF00A02F78 /* CoreDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				17EBA2942C0750E400A02F78 /* WhatsappChatApp.swift */,
-				17EBA2962C0750E400A02F78 /* ContentView.swift */,
+				17EBA3702C089FD400A02F78 /* ContentView.swift.swift */,
+				17EBA2A22C0755E700A02F78 /* MainTabview.swift */,
+				17EBA34C2C08979700A02F78 /* Chat */,
+				17EBA2B12C0777E300A02F78 /* ProfileView.swift */,
+				17EBA2D52C07CF1400A02F78 /* PhotoPicker.swift */,
+				17EBA3772C08A0BF00A02F78 /* CoreDataView.swift */,
+				17EBA2AE2C075ED700A02F78 /* Views dummy */,
+				17EBA2FB2C0832FD00A02F78 /* Storage */,
 				17EBA2982C0750EF00A02F78 /* Assets.xcassets */,
 				17EBA29A2C0750EF00A02F78 /* Preview Content */,
 			);
@@ -65,6 +104,39 @@
 				17EBA29B2C0750EF00A02F78 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		17EBA2AE2C075ED700A02F78 /* Views dummy */ = {
+			isa = PBXGroup;
+			children = (
+				17EBA2A62C075E4700A02F78 /* CallView.swift */,
+				17EBA2AC2C075ECA00A02F78 /* SettingView.swift */,
+				17EBA2AA2C075EB400A02F78 /* CommunityView.swift */,
+				17EBA2A82C075E9600A02F78 /* UpdatesView.swift */,
+			);
+			path = "Views dummy";
+			sourceTree = "<group>";
+		};
+		17EBA2FB2C0832FD00A02F78 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				17EBA2F92C0828C300A02F78 /* StorageProvider.swift */,
+				17EBA3752C08A0AB00A02F78 /* Persistence.swift */,
+				17EBA2FC2C08333D00A02F78 /* Chat.swift */,
+				17EBA3722C08A08C00A02F78 /* FruitsCoreData.xcdatamodeld */,
+				17EBA2F62C08280700A02F78 /* ChatsModel.xcdatamodeld */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		17EBA34C2C08979700A02F78 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				17EBA2A42C0756AB00A02F78 /* ChatView.swift */,
+				17EBA3272C0857AD00A02F78 /* ChatCellView.swift */,
+				17EBA2B32C079F4700A02F78 /* ChatDetailView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +209,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17EBA2972C0750E400A02F78 /* ContentView.swift in Sources */,
+				17EBA2AB2C075EB400A02F78 /* CommunityView.swift in Sources */,
+				17EBA2A52C0756AB00A02F78 /* ChatView.swift in Sources */,
+				17EBA3762C08A0AB00A02F78 /* Persistence.swift in Sources */,
+				17EBA2B22C0777E300A02F78 /* ProfileView.swift in Sources */,
+				17EBA3742C08A08C00A02F78 /* FruitsCoreData.xcdatamodeld in Sources */,
+				17EBA3782C08A0BF00A02F78 /* CoreDataView.swift in Sources */,
 				17EBA2952C0750E400A02F78 /* WhatsappChatApp.swift in Sources */,
+				17EBA3712C089FD400A02F78 /* ContentView.swift.swift in Sources */,
+				17EBA2FA2C0828C300A02F78 /* StorageProvider.swift in Sources */,
+				17EBA2A92C075E9600A02F78 /* UpdatesView.swift in Sources */,
+				17EBA3282C0857AD00A02F78 /* ChatCellView.swift in Sources */,
+				17EBA2B42C079F4700A02F78 /* ChatDetailView.swift in Sources */,
+				17EBA2D62C07CF1400A02F78 /* PhotoPicker.swift in Sources */,
+				17EBA2AD2C075ECA00A02F78 /* SettingView.swift in Sources */,
+				17EBA2F82C08280700A02F78 /* ChatsModel.xcdatamodeld in Sources */,
+				17EBA2A72C075E4700A02F78 /* CallView.swift in Sources */,
+				17EBA2FD2C08333D00A02F78 /* Chat.swift in Sources */,
+				17EBA2A32C0755E700A02F78 /* MainTabview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +363,8 @@
 				DEVELOPMENT_TEAM = JN658639F2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "camera usage in app";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "used in app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +394,8 @@
 				DEVELOPMENT_TEAM = JN658639F2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "camera usage in app";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "used in app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +436,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		17EBA2F62C08280700A02F78 /* ChatsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17EBA2F72C08280700A02F78 /* ChatsModel.xcdatamodel */,
+			);
+			currentVersion = 17EBA2F72C08280700A02F78 /* ChatsModel.xcdatamodel */;
+			path = ChatsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		17EBA3722C08A08C00A02F78 /* FruitsCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17EBA3732C08A08C00A02F78 /* FruitsCoreData.xcdatamodel */,
+			);
+			currentVersion = 17EBA3732C08A08C00A02F78 /* FruitsCoreData.xcdatamodel */;
+			name = FruitsCoreData.xcdatamodeld;
+			path = /Users/rakhisinghal/Documents/WhatsappChat/WhatsappChat/Storage/FruitsCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 17EBA2892C0750E400A02F78 /* Project object */;
 }
