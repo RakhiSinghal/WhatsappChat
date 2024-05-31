@@ -1,6 +1,6 @@
 //
-//  CoreDatatBootCamp.swift
-//  newNickCoredata
+//  CoreDataViewModel.swift
+//  WhatsappChat
 //
 //  Created by Rakhi Singhal on 30/05/24.
 //
@@ -20,7 +20,7 @@ class CoreDataViewModel: ObservableObject {
             self.fetchChats()
         }}
         func fetchChats(){
-            let request = NSFetchRequest<ChatEntity>(entityName: "ChatEntity")
+            let request = NSFetchRequest<ChatEntity>(entityName:"ChatEntity")
             do{
                 savedEntity = try container.viewContext.fetch(request)
             } catch let error{
@@ -53,53 +53,8 @@ class CoreDataViewModel: ObservableObject {
         entity.name = newName
         saveData()
     }
-    
 }
 
-struct CoreDatatBootCamp: View {
-    @StateObject var vm = CoreDataViewModel()
-    @State var textFieldText: String = ""
-    var body: some View {
-        NavigationView{
-            VStack(spacing: 20){
-                TextField("add chat", text: $textFieldText)
-                    .font(.headline)
-                    .padding(.leading)
-                    .frame(height:55)
-                    .background(.gray.opacity(0.3))
-                    .cornerRadius(10)
-                    .padding(.horizontal)
-                Button(action: {
-                    guard !textFieldText.isEmpty else{return}
-                    vm.addChats(text: textFieldText)
-                    textFieldText = ""
-                }, label: {
-                    Text("Save")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(.pink)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                })
-                
-                List{
-                    ForEach(vm.savedEntity){ entity in
-                        Text(entity.name ?? "no name")
-                            .onTapGesture {
-                                vm.updateChat(entity: entity)
-                            }
-                    }.onDelete(perform: vm.deleteFruit)
-                }.listStyle(.plain)
-                 Spacer()
-            }.navigationTitle("Chats")
-            
-        }
-        
-    }
-}
 
-#Preview {
-    CoreDatatBootCamp()
-}
+
+
