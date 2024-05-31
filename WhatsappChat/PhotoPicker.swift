@@ -43,7 +43,6 @@ extension PhotoPicker {
           self?.pickerView.selectedPhoto = image as? UIImage
         }
       }
-      
       pickerView.dismiss()
     }
   }

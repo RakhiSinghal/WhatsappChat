@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ChatCellView: View {
-//    @ObservableObject var chat: ChatEntity
     var body: some View {
         HStack{
             Image("user1")
@@ -24,7 +23,7 @@ struct ChatCellView: View {
                 HStack{
                     Image(systemName: "checkmark").foregroundColor(.blue)
                     Spacer()
-                    Text("rakhi isJF JFJFJF JFJ FHGF ssjfvbfvbhfdvhdfvhvdhjgvhghjgbfhjgbfjgbhfhfhfhfhffffffffffff")
+                    Text("On tap of first cell it will navigate to next chat detail view.")
                         .foregroundColor(.gray)
                         .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                 }

@@ -4,63 +4,96 @@
 //
 //  Created by Rakhi Singhal on 29/05/24.
 //
-
 import SwiftUI
-
 struct ChatDetailView: View {
-//    let storageProvider: StorageProvider
-//    @ObservedObject var chat: Chat
-//    @State var presentedSheet: Sheet?
-////    @SectionedFetchRequest(fetchRequest: Album.sortedByArtistAndRelease,
-////                           sectionIdentifier: \Album.artist.name) var albums
-//    @SectionedFetchRequest(fetchRequest: Chat.sortedByName,
-//                           sectionIdentifier: \Chat.name) var chats
+    @StateObject var vm = CoreDataViewModel()
+    @State var textFieldMsg: String = ""
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationStack{
-            VStack(spacing: 20){
-                HStack {
-                    Spacer()
-                    Text("Sent Message")
-                        .font(.title2)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.green.opacity(0.5))
-                        )
-                }.padding()
-                HStack {
-                    Text("Received Message")
-                        .font(.title2)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.gray.opacity(0.1))
-                        )
-                    Spacer()
-                }.padding()
-                
-                List {
-                    
-                  }
+            VStack(){
+                List{
+                    HStack {
+                        Text("Add text below")
+                            .font(.title3)
+                            .padding(5)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.gray.opacity(0.1))
+                            )
+                        Spacer()
+                    }.padding()
+                    ForEach(vm.savedEntity){ entity in
+                        HStack {
+                            Spacer()
+                            Text(entity.name ?? "no name")
+                                .font(.title3)
+                                .padding(5)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.green.opacity(0.4))
+                                )
+                                .onTapGesture {
+                                    vm.updateChat(entity: entity)
+                                }
+                        } .padding(.vertical, 1)
+                    }.onDelete(perform: vm.deleteFruit)
+                        .listRowSeparator(.hidden)
+                }
+                .frame(maxHeight: .infinity)
+                .listStyle(.plain)
+                .padding(.vertical)
                 Spacer()
-                BottomBar().edgesIgnoringSafeArea(.bottom)
+                //bottom bar
+                HStack(spacing:10) {
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "plus")
+                            .foregroundColor(.black)
+                    }
+                    HStack{
+                        TextField("Add text here", text: $textFieldMsg)
+                            .font(.title3)
+                            .padding(.leading)
+                            .frame(height:30)
+                            .background(.white)
+                            .cornerRadius(200)
+                    }
+                    Button(action: {
+                        guard !textFieldMsg.isEmpty else{return}
+                        vm.addChats(text: textFieldMsg)
+                        textFieldMsg = ""
+                    }) {        Image(systemName: "paperplane.fill")
+                            .resizable()
+                            .frame(width: 15, height: 15)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .clipShape(Circle())
+                    }
+                }
+                .padding()
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(10)
+                .edgesIgnoringSafeArea(.bottom)
             }
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack{
                         Button{
                             presentationMode.wrappedValue.dismiss()
-//                            presentedSheet = .addAlbum
                         }label:{
                             Image(systemName: "chevron.left")
                                 .foregroundColor(.black)
                         }
-                        Image("user1")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 30, height:30)
-                            .clipShape(Circle())
+                        NavigationLink(destination: ProfileView()) {
+                            Image("user1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 30, height: 30)
+                                .clipShape(Circle())
+                        }
                         Text("Rakhi").bold()
                     }
                 }
@@ -81,59 +114,8 @@ struct ChatDetailView: View {
             }
         }.navigationBarBackButtonHidden(true)
     }
+}
 
-}
-struct BottomBar: View {
-    var body: some View {
-        HStack(spacing: 20) {
-            Button(action: {
-            }) {
-                    Image(systemName: "plus")
-                        .foregroundColor(.black)
-            }
-            Button(action: {
-            }) {
-                HStack{
-                    Spacer()
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.gray)
-                        .padding()
-                }
-            }
-            .frame(width: 200,height: 30)
-            .background(.white)
-            .cornerRadius(5)
-            Button(action: {
-            }) {
-                Text("₹")
-                    .font(.title3)
-                    .foregroundColor(.black)
-            }
-            Button(action: {
-            }) {
-                    Image(systemName: "mic")
-                        .foregroundColor(.black)
-            }
-            Button(action: {
-            }) {
-                    Image(systemName: "camera")
-                        .foregroundColor(.black)
-            }
-        }
-        .padding()
-        .background(Color.gray.opacity(0.1))
-        .cornerRadius(10)
-    }
-}
-extension ChatDetailView {
-    enum Sheet: Identifiable {
-        case addAlbum
-        
-        var id: Int {
-            self.hashValue
-        }
-    }
-}
 #Preview {
     ChatDetailView()
 }

@@ -14,12 +14,24 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                VStack(spacing: 15)
-                {
-                    Image("user1")
-                        .resizable()
-                        .frame(width:150 ,height: 150)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                VStack{
+                    if let image = selectedPhoto {
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width:150 ,height: 150)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            .onTapGesture {
+                                isPresentingPicker = true
+                            }
+                    }else {
+                        Image("user1")
+                            .resizable()
+                            .frame(width:150 ,height: 150)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            .onTapGesture {
+                                isPresentingPicker = true
+                            }
+                    }
                     Spacer().frame(height: 10)
                     Text("Rakhi Singhal")
                         .bold()
@@ -30,13 +42,13 @@ struct ProfileView: View {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(.gray.opacity(0.1))
-                                .frame(height: 80)
+                                .frame(height: 60)
                             Button{
                             }label:{
                                 VStack{
                                     Image(systemName:"message")
                                         .foregroundColor(.green)
-                                    Spacer().frame(height: 15)
+                                    Spacer().frame(height: 5)
                                     Text("Message")
                                         .foregroundColor(.black)
                                 }}
@@ -44,14 +56,13 @@ struct ProfileView: View {
                         ZStack{
                             RoundedRectangle(cornerRadius: 8)
                                 .fill(.gray.opacity(0.1))
-                                .frame(height: 80)
+                                .frame(height: 60)
                             Button{
-                                
                             }label:{
                                 VStack{
                                     Image(systemName: "magnifyingglass")
                                         .foregroundColor(.green)
-                                    Spacer().frame(height: 15)
+                                    Spacer().frame(height: 5)
                                     Text("Search")
                                         .foregroundColor(.black)
                                 }}
@@ -61,37 +72,28 @@ struct ProfileView: View {
                     HStack{
                         VStack {
                             Text("Availabel for chat")
-                            Spacer()
+                            Spacer(minLength: 1)
                             Text("30 May 2024")
                                 .foregroundColor(.gray)
                         }
                         .padding()
                         Spacer()
                     }
-                    .padding(.leading,10)
+                    .padding(.leading,2)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .frame(height: 70)
                     .background(
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Color.gray.opacity(0.1))
                     )
                     .padding(.horizontal,20)
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.gray.opacity(0.1))
-                            .frame(height: 80)
-                        Button{
-                            isPresentingPicker = true
-                        }label:{
-                                Text("Image picker")
-                                    .foregroundColor(.gray)
-                            }
-                    }.padding()
+                    Spacer()
                 }
             }
             .navigationBarTitle("Profile", displayMode: .inline)
             .navigationBarBackButtonHidden(false)
             .sheet(isPresented: $isPresentingPicker, content: {
-              PhotoPicker(selectedPhoto: $selectedPhoto, dismiss: { self.isPresentingPicker = false })
+                PhotoPicker(selectedPhoto: $selectedPhoto, dismiss: { self.isPresentingPicker = false })
             })
         }
     }

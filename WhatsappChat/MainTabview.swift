@@ -17,7 +17,7 @@ struct MainTabview: View {
             CallView()
                 .tabItem {
                     Label("Calls", systemImage: "phone.fill") }
-            CoreDataView()
+            CommunityView()
                 .tabItem {
                     Label("Communities", systemImage: "person.3.fill") }
             ChatView()
